@@ -1,0 +1,29 @@
+<main class="w-screen h-screen relative"> 
+    <div class="absolute z-20 bg-black/80 h-screen w-screen">
+        <header><app-navbar/></header>
+
+        <div></div>
+        <section class="flex flex-col lg:h-[70vh] items-center justify-center text-white ">
+            <h3 class="text-center lg:text-8xl lg:w-[80vw] bg-gradient-to-br from-white to-green-400 text-transparent bg-clip-text font-extrabold">Find the Next Destination for your Next Vacation</h3>
+            <div class="flex justify-center">
+                <p class="mt-5 lg:mt-10 lg:w-[40vw] text-center">Are you looking for a vacation destination ? let us guide you whatever you want to go next time</p>
+            </div>
+
+            <div class="mt-5 lg:mt-10 relative flex items-center gap-6">
+                <div  class="w-[10vw] h-[8vh] rounded-lg bg-green-500 flex justify-center items-center">
+                    <p>Destination</p>
+                    <div id="destinationBox" (click)="goToDestination()" class="fixed hover:cursor-pointer z-40 duration-300 bg-gray-900 text-white h-20 w-20 rounded-full grid place-content-center">
+                        <p>view</p>
+                    </div>
+                </div>
+
+                <a href="" class="flex items-center gap-2 text-lg"><span>en savoir plus</span> <i class='bx bx-right-arrow-alt rotate-45 text-lg' ></i></a>
+            </div>
+        </section>
+
+        <div class="text-white container mx-auto absolute bottom-5 left-10">
+            <p>coded by : <a href="" class="underline ">&#64;Likeur off</a></p>
+        </div>
+    </div>
+    <video src="../../../assets/img/vid2.mp4" autoplay class="absolute z-10 w-full h-full object-cover" ></video>
+</main>
