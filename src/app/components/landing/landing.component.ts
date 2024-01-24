@@ -25,11 +25,11 @@ export class LandingComponent implements OnInit{
     gsap.set('#menuContextuelle',{
       height:0
     })
-    gsap.set('#FolderBox',{
-      y:50,
-      opacity:0,
-      display:'none',
-    })
+    // gsap.set('#FolderBox',{
+    //   y:50,
+    //   opacity:0,
+    //   display:'none',
+    // })
 
     this.Menutl.to('#menuContextuelle',{
       height:'70vh',
@@ -52,7 +52,7 @@ export class LandingComponent implements OnInit{
 
   openFolder(){
     gsap.to('#FolderBox',{
-      y:-50,
+      y:0,
       opacity:1,
       display:'block'
     })
