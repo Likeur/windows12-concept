@@ -1,16 +1,28 @@
 <main class="h-screen w-screen overflow-hidden relative">
+    <div id="chargementBox" class="absolute z-50 bg-black/60 backdrop-blur-md w-full h-full grid place-content-center">
+        <div class="flex flex-col">
+            <img src="../../../assets/img/win12.png" class="w-20" alt="">
+
+            <div class="mt-40 relative -ml-7">
+                <div id="chargement1" class="text-transparent absolute bg-white rounded-full h-2 w-0">.</div>
+                <div id="chargement2" class="text-transparent absolute bg-white rounded-full h-2 w-0">.</div>
+                <div id="chargement3" class="text-transparent absolute bg-white rounded-full h-2 w-0">.</div>
+                <div id="chargement4" class="text-transparent absolute bg-white rounded-full h-2 w-0">.</div>
+            </div>
+        </div>
+    </div>
     <div class="absolute z-20 w-full h-full bg-black/40"></div>
     <img src="../../../assets/img/win12.jpg" class="absolute z-10 h-full w-full" alt="">
     <div class="h-full w-full absolute z-30 flex justify-center">
-        <div class="top-24 relative text-white flex flex-col items-center">
+        <div id="heureBox" class="top-24 relative text-white flex flex-col items-center">
             <h3 class="text-5xl">18h32</h3>
             <p class="text-xl">Tuesday , January 14</p>
         </div>
     </div>
     <div class="w-full h-full absolute z-40 p-2">
-        <div class="bg-white/15 bottom-4 rounded-md gap-3 flex items-center absolute w-max backdrop-blur-md p-2 ">
+        <div id="menuBoxLeft" class="bg-white/15 bottom-4 rounded-md gap-3 flex items-center absolute w-max backdrop-blur-md p-2 ">
             <button  (click)="OpenMenu()" title="menu btn" class="bg-white/25 active:scale-50 duration-300 rounded-md h-8 w-8 p-2 grid place-content-center">
-                <i class='bx bxl-windows text-blue-400 text-2xl'></i>
+                <img src="../../../assets/img/win12.png" alt="">
             </button >
             <div class="flex bg-white/30 h-8 rounded-full gap-1 items-center text-white p-2">
                 <i class='bx bx-search'></i>
@@ -28,7 +40,22 @@
             </div>
         </div>
 
-        <div id="menuContextuelle" class="bg-white/15 z-50 backdrop-blur-md overflow-hidden absolute h-[70vh] w-[50vw] bottom-20 rounded-md flex text-white">
+        <div id="batterieBoxRight" class="bg-white/15 h-12 bottom-4 rounded-md right-2 gap-4 flex items-center absolute backdrop-blur-md p-3">
+            <div class="text-white flex items-center gap-2">
+                <img src="../../../assets/img/weather.png" class="w-7" alt="">
+                <span class="text-xl">38°</span>
+            </div>
+            <div class="text-white flex items-center gap-2">
+                <i class='bx bx-volume-full' ></i>
+                <i class='bx bx-world' ></i>
+                <i class='bx bxs-battery-charging'></i>
+            </div>
+            <div>
+                <span class="text-white">18h32</span>
+            </div>
+        </div>
+
+        <div id="menuContextuelle" class="bg-white/15 z-50 backdrop-blur-md overflow-hidden absolute h-[70vh] w-[40vw] bottom-20 rounded-md flex text-white">
             <aside class="flex gap-2 p-2 h-full w-[35%] bg-black/30">
                 <div class="flex flex-col justify-between">
                     <i class='bx bx-menu text-2xl'></i>
@@ -59,10 +86,18 @@
                         </ul>
                     </div>
                     <div class="mt-3">
-                        <div class="font-semibold"><span>D</span></div>
+                        <div class="font-semibold"><span>E</span></div>
                         <ul class="mt-2">
-                            <li class="mt-1"><button title="access" class="flex items-center gap-2">Access</button></li>
-                            <li class="mt-1"><button title="access" class="flex items-center gap-2">Alarm & clock</button></li>
+                            <li class="mt-1"><button title="access" class="flex items-center gap-2"><img src="../../../assets/img/excel.png" class="w-5" alt=""><span>Excel</span></button></li>
+                           
+                        </ul>
+                    </div>
+                    <div class="mt-3">
+                        <div class="font-semibold"><span>F</span></div>
+                        <ul class="mt-2">
+                            <li class="mt-1"><button title="access" class="flex items-center gap-2"><img src="../../../assets/img/feedback.png" class="w-5" alt=""><span>Feedback</span></button></li>
+                            <li class="mt-1"><button title="access" class="flex items-center gap-2"><img src="../../../assets/img/folder.png" class="w-5" alt=""><span>file explorer</span></button></li>
+                           
                         </ul>
                     </div>
                 </nav>
@@ -74,13 +109,34 @@
                         <input type="text" placeholder="Search..." class="bg-transparent w-full text-center border-none outline-none placeholder:text-white/80" id="searchInput">
                         <i class='bx bx-play' ></i>
                     </div>
+
+                    <div class="mt-4">
+                        <div class="flex items-center gap-2">
+                            <span>Pinned App</span>
+                        </div>
+
+                        <div class="grid lg:grid-cols-4 mt-2 gap-3">
+                            <img src="../../../assets/img/edge.png" class="hover:bg-white/15 duration-300 p-2 rounded-md hover:cursor-pointer" alt="">
+                            <img src="../../../assets/img/vlc.png" class="hover:bg-white/15 duration-300 p-2 rounded-md hover:cursor-pointer" alt="">
+                            <img src="../../../assets/img/outlook.png" class="hover:bg-white/15 duration-300 p-2 rounded-md hover:cursor-pointer" alt="">
+                            <img src="../../../assets/img/music.png" class="hover:bg-white/15 duration-300 p-2 rounded-md hover:cursor-pointer" alt="">
+                            <img src="../../../assets/img/store.png" class="hover:bg-white/15 duration-300 p-2 rounded-md hover:cursor-pointer" alt="">
+                            <img src="../../../assets/img/icons8-paramètres-48.png" class="hover:bg-white/15 duration-300 p-2 rounded-md hover:cursor-pointer" alt="">
+                            <img src="../../../assets/img/office.png" class="hover:bg-white/15 duration-300 p-2 rounded-md hover:cursor-pointer" alt="">
+                            <img src="../../../assets/img/paint.png" class="hover:bg-white/15 duration-300 p-2 rounded-md hover:cursor-pointer" alt="">
+                            <img src="../../../assets/img/folder.png" (click)="openFolderPin()" class="hover:bg-white/15 duration-300 p-2 rounded-md hover:cursor-pointer" alt="">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 
         <div class="h-full w-full grid place-content-center z-30">
             <div id="FolderBox" class="bg-white/10 backdrop-blur-md overflow-hidden w-[60vw] h-[70vh] relative text-white/80 rounded-md">
-                <div class="h-12 flex items-center justify-between">
+                <div id="preFolder" class="absolute h-full w-full bg-black/70 z-50 backdrop-blur-md grid place-content-center">
+                    <img id="imgFolder" src="../../../assets/img/folder.png" alt="">
+                </div>
+                <div id="headFolder" class="h-12 flex items-center relative z-30 justify-between">
                     <div class="flex items-center gap-2">
                         <div class="bg-black/30 rounded-r-md h-full w-40 p-2  flex justify-between items-center">
                             <div class="flex items-center gap-2">
@@ -91,7 +147,7 @@
                         </div>
                         <button class="text-xl">+</button>
                     </div>
-                    <div class="text-white/80 flex items-center gap-2 p-2">
+                    <div class="text-white/80 flex items-center gap-4 p-2">
                         <button>-</button>
                         
                         <button (click)="toFullScreen()" class="">
@@ -105,7 +161,7 @@
                         <button (click)="closeFolder()"><i class='bx bx-x text-xl'></i></button>
                     </div>
                 </div>
-                <div class="h-12 flex justify-between items-center gap-2 bg-black/30 p-2">
+                <div id="secondFolder" class="h-12 flex justify-between items-center gap-2 bg-black/30 p-2">
                     <div class="text-white/80 flex items-center gap-2">
                         <button><i class='bx bx-left-arrow-alt text-xl' ></i></button>
                         <button><i class='bx bx-right-arrow-alt text-xl' ></i></button>
@@ -126,7 +182,7 @@
                     </div>
                 </div>
                 <div class="h-full flex">
-                    <div class="p-2 h-full w-[27%]">
+                    <div id="asideFolder" class="p-2 h-full w-[27%]">
                         <ul class="w-full mt-2">
                             <li>
                                 <a routerLink="" class="bg-white/15 flex items-center gap-2 backdrop-blur-sm rounded-md p-2 w-full">
@@ -175,14 +231,14 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="h-full w-full backdrop-blur-sm bg-black/70 p-2 rounded-l-md">
+                    <div id="contentFolder"  class="h-full w-full backdrop-blur-sm bg-black/70 p-2 rounded-l-md">
                         <div class="h-10 flex items-center justify-between">
                             <div class="flex items-center gap-3">
                                 <div class="flex items-center gap-2">
                                     <i class='bx bx-history'></i>
                                     <i class='bx bxs-chevron-down'></i>
                                 </div>
-                                <div class="w-0.5 h-full bg-white/15"></div>
+                                <div class="w-0.5 h-full bg-white/15 text-transparent">.</div>
                                 <div class="flex items-center gap-2">
                                     <i class='bx bx-cut' ></i>
                                     <i class='bx bx-copy-alt'></i>
@@ -191,7 +247,7 @@
                                     <i class='bx bx-share'></i>
                                     <i class='bx bx-trash'></i>
                                 </div>
-                                <div class="w-0.5 h-full bg-white/15"></div>
+                                <div class="w-0.5 h-full bg-white/15 text-transparent">.</div>
                                 <div class="flex items-center gap-2">
                                     <div class="flex items-center gap-2">
                                         <i class='bx bx-filter-alt'></i>
@@ -202,7 +258,7 @@
                                         <i class='bx bxs-chevron-down'></i>
                                     </div>
                                 </div>
-                                <div class="w-0.5 h-full bg-white/15"></div>
+                                <div class="w-0.5 h-full bg-white/15 text-transparent">.</div>
                                 <button class="text-2xl">...</button>
                                 
                             </div>
@@ -263,7 +319,8 @@
                                         <p>Local Disk (C:)</p>
                                     </div>
                                     <div class="mt-3 h-2 w-full bg-white/25 rounded-full">
-                                        <div class=" w-[40%] h-full bg-blue-400 rounded-full"></div>
+
+                                        <div class=" w-[40%] h-full bg-blue-400 rounded-full text-transparent">.</div>
                                     </div>
                                     <p class="mt-1">876GB of 1Tb</p>
                                 </div>
@@ -273,7 +330,7 @@
                                         <p>ESD-USB (E:)</p>
                                     </div>
                                     <div class="mt-3 h-2 w-full bg-white/25 rounded-full">
-                                        <div class=" w-[40%] h-full bg-blue-400 rounded-full"></div>
+                                        <div class=" w-[40%] h-full bg-blue-400 rounded-full text-transparent">.</div>
                                     </div>
                                     <p class="mt-1">300GB of 1Tb</p>
                                 </div>
