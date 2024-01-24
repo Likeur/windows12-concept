@@ -1,29 +1,150 @@
-<main class="w-screen h-screen relative"> 
-    <div class="absolute z-20 bg-black/80 h-screen w-screen">
-        <header><app-navbar/></header>
-
-        <div></div>
-        <section class="flex flex-col lg:h-[70vh] items-center justify-center text-white ">
-            <h3 class="text-center lg:text-8xl lg:w-[80vw] bg-gradient-to-br from-white to-green-400 text-transparent bg-clip-text font-extrabold">Find the Next Destination for your Next Vacation</h3>
-            <div class="flex justify-center">
-                <p class="mt-5 lg:mt-10 lg:w-[40vw] text-center">Are you looking for a vacation destination ? let us guide you whatever you want to go next time</p>
+<main class="h-screen w-screen overflow-hidden relative">
+    <div class="absolute z-20 w-full h-full bg-black/40"></div>
+    <img src="../../../assets/img/win12.jpg" class="absolute z-10 h-full w-full" alt="">
+    <div class="w-full h-full absolute z-40 p-2">
+        <div class="bg-white/15 bottom-4 rounded-md gap-3 flex items-center absolute w-max backdrop-blur-md p-2 ">
+            <button  (click)="OpenMenu()" title="menu btn" class="bg-white/25 active:scale-50 duration-300 rounded-md h-8 w-8 p-2 grid place-content-center">
+                <i class='bx bxl-windows text-blue-400 text-2xl'></i>
+            </button >
+            <div class="flex bg-white/30 h-8 rounded-full gap-1 items-center text-white p-2">
+                <i class='bx bx-search'></i>
+                <input type="text" placeholder="Search..." class="bg-transparent border-none outline-none placeholder:text-white/80" id="searchInput">
+                
             </div>
 
-            <div class="mt-5 lg:mt-10 relative flex items-center gap-6">
-                <div  class="w-[10vw] h-[8vh] rounded-lg bg-green-500 flex justify-center items-center">
-                    <p>Destination</p>
-                    <div id="destinationBox" (click)="goToDestination()" class="fixed hover:cursor-pointer z-40 duration-300 bg-gray-900 text-white h-20 w-20 rounded-full grid place-content-center">
-                        <p>view</p>
+            <div class="gap-2 flex items-center">
+                <button title="menu btn" (click)="openFolder()" class="rounded-md h-8 w-8 p-2 grid place-content-center">
+                    <i class='bx bxs-folder-open text-white/80 text-2xl'></i>
+                </button >
+                <button title="menu btn" class="rounded-md h-8 w-8 p-2 grid place-content-center">
+                    <i class='bx bxl-gmail text-white/80 text-2xl'></i>
+                </button >
+            </div>
+        </div>
+
+        <div id="menuContextuelle" class="bg-white/15 z-50 backdrop-blur-md overflow-hidden absolute h-[70vh] w-[50vw] bottom-20 rounded-md flex text-white">
+            <aside class="flex gap-2 p-2 h-full w-[35%] bg-black/30">
+                <div class="flex flex-col justify-between">
+                    <i class='bx bx-menu text-2xl'></i>
+                    <div class="flex flex-col items-center">
+                        <div class="h-5 w-5 overflow-hidden rounded-full">
+                            <img src="../../../assets/img/likepp.jpg" class="w-full h-full object-cover" alt="">
+                        </div>
+                        <button title="power-off" class="mt-2">
+                            <i class='bx bx-power-off text-2xl' ></i>
+                        </button>
                     </div>
                 </div>
-
-                <a href="" class="flex items-center gap-2 text-lg"><span>en savoir plus</span> <i class='bx bx-right-arrow-alt rotate-45 text-lg' ></i></a>
+                <nav class="ml-2 mt-1">
+                    <div>
+                        <div class="font-semibold"><span>A</span></div>
+                        <ul class="mt-2">
+                            <li><button title="access" class="flex items-center gap-2"><i class='bx bx-data text-blue-400 text-xl' ></i> <span>Access</span></button></li>
+                            <li><button title="access" class="flex items-center gap-2"><i class='bx bx-alarm text-blue-400 text-xl' ></i> <span>Alarm & clock</span></button></li>
+                        </ul>
+                    </div>
+                    <div class="mt-3">
+                        <div class="font-semibold"><span>C</span></div>
+                        <ul class="mt-2">
+                            <li><button title="access" class="flex items-center gap-2"><i class='bx bxs-calculator text-blue-400 text-xl'></i> Calculator</button></li>
+                            <li><button title="access" class="flex items-center gap-2"><i class='bx bxs-calendar text-blue-400 text-xl' ></i><span>Calendar</span></button></li>
+                            <li><button title="access" class="flex items-center gap-2"><i class='bx bx-camera text-blue-400 text-xl'></i><span>Camera</span></button></li>
+                            <li><button title="access">Clipchamp</button></li>
+                        </ul>
+                    </div>
+                    <div class="mt-3">
+                        <div class="font-semibold"><span>D</span></div>
+                        <ul class="mt-2">
+                            <li><button title="access" class="flex items-center gap-2">Access</button></li>
+                            <li><button title="access" class="flex items-center gap-2">Alarm & clock</button></li>
+                        </ul>
+                    </div>
+                </nav>
+            </aside>
+            <div class="p-2 w-[65%]">
+                <div class="w-full">
+                    <div class="flex bg-white/30 h-8 w-full justify-between rounded-full gap-1 items-center text-white p-2">
+                        <i class='bx bx-search'></i>
+                        <input type="text" placeholder="Search..." class="bg-transparent w-full text-center border-none outline-none placeholder:text-white/80" id="searchInput">
+                        <i class='bx bx-play' ></i>
+                    </div>
+                </div>
             </div>
-        </section>
+        </div>
 
-        <div class="text-white container mx-auto absolute bottom-5 left-10">
-            <p>coded by : <a href="" class="underline ">&#64;Likeur off</a></p>
+        <div class="h-full w-full grid place-content-center z-30">
+            <div id="FolderBox" class="bg-white/10 backdrop-blur-md overflow-hidden w-[60vw] h-[70vh] relative text-white/80 rounded-md">
+                <div class="h-12 flex items-center justify-between">
+                    <div class="flex items-center gap-2">
+                        <div class="bg-black/30 rounded-r-md h-full w-40 p-2  flex justify-between items-center">
+                            <div class="flex items-center gap-2">
+                                <i class='bx bx-home text-xl'></i>
+                                <span>Home</span>
+                            </div> 
+                            <button><i class='bx bx-x text-xl'></i></button>
+                        </div>
+                        <button class="text-xl">+</button>
+                    </div>
+                    <div class="text-white/80 flex items-center gap-2 p-2">
+                        <button>-</button>
+                        
+                        <button (click)="toFullScreen()" class="">
+                            @if (isFullScreen) {
+                                <i class='bx bx-collapse'></i>
+                            }@else {
+                                <i class='bx bx-fullscreen'></i>
+                            }
+                            
+                        </button>
+                        <button (click)="closeFolder()"><i class='bx bx-x text-xl'></i></button>
+                    </div>
+                </div>
+                <div class="h-12 flex justify-between items-center gap-2 bg-black/30 p-2">
+                    <div class="text-white/80 flex items-center gap-2">
+                        <button><i class='bx bx-left-arrow-alt text-xl' ></i></button>
+                        <button><i class='bx bx-right-arrow-alt text-xl' ></i></button>
+                        <button><i class='bx bx-up-arrow-alt text-xl' ></i></button>
+                    </div>
+                    <div class="flex items-center justify-between bg-white/20 w-full backdrop-blur-md h-full p-2 rounded-full">
+                        <div class="flex items-center">
+                            <i class='bx bx-home text-xl'></i>
+                            <i class='bx bx-chevron-right'></i>
+                            <span>home</span>
+                            <i class='bx bx-chevron-right'></i>
+                        </div>
+                        <button><i class='bx bx-refresh text-xl'></i></button>
+                    </div>
+                    <div class="flex bg-white/30 h-8 rounded-full gap-1 items-center text-white/80 p-2">
+                        <i class='bx bx-search'></i>
+                        <input type="text" placeholder="Type here to search" class="bg-transparent border-none outline-none placeholder:text-white/80" id="searchInput">
+                    </div>
+                </div>
+                <div class="h-full flex">
+                    <div class="p-2 backdrop-blur-sm h-full w-[25%]">
+                        <ul class="w-full mt-2">
+                            <li>
+                                <a routerLink="" class="bg-white/15 flex items-center gap-1 backdrop-blur-sm rounded-md p-2 w-full">
+                                    <i class='bx bx-home text-xl'></i>
+                                    <span>Home</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a routerLink="" class="flex bg-transparent items-center gap-1  rounded-md p-2 w-full">
+                                    <i class='bx bx-home text-xl'></i>
+                                    <span>OneDrives</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a routerLink="" class="flex bg-transparent items-center gap-1 rounded-md p-2 w-full">
+                                    <i class='bx bx-home text-xl'></i>
+                                    <span>Galery</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="h-full w-full backdrop-blur-sm bg-black/70 rounded-l-md"></div>
+                </div>
+            </div>
         </div>
     </div>
-    <video src="../../../assets/img/vid2.mp4" autoplay class="absolute z-10 w-full h-full object-cover" ></video>
 </main>
