@@ -1,6 +1,12 @@
 <main class="h-screen w-screen overflow-hidden relative">
     <div class="absolute z-20 w-full h-full bg-black/40"></div>
     <img src="../../../assets/img/win12.jpg" class="absolute z-10 h-full w-full" alt="">
+    <div class="h-full w-full absolute z-30 flex justify-center">
+        <div class="top-24 relative text-white flex flex-col items-center">
+            <h3 class="text-5xl">18h32</h3>
+            <p class="text-xl">Tuesday , January 14</p>
+        </div>
+    </div>
     <div class="w-full h-full absolute z-40 p-2">
         <div class="bg-white/15 bottom-4 rounded-md gap-3 flex items-center absolute w-max backdrop-blur-md p-2 ">
             <button  (click)="OpenMenu()" title="menu btn" class="bg-white/25 active:scale-50 duration-300 rounded-md h-8 w-8 p-2 grid place-content-center">
@@ -14,10 +20,10 @@
 
             <div class="gap-2 flex items-center">
                 <button title="menu btn" (click)="openFolder()" class="rounded-md h-8 w-8 p-2 grid place-content-center">
-                    <i class='bx bxs-folder-open text-white/80 text-2xl'></i>
+                    <img src="../../../assets/img/folder.png" class="w-12 scale-125" alt="">
                 </button >
                 <button title="menu btn" class="rounded-md h-8 w-8 p-2 grid place-content-center">
-                    <i class='bx bxl-gmail text-white/80 text-2xl'></i>
+                    <img src="../../../assets/img/mail.png" class="w-7 scale-125" alt="">
                 </button >
             </div>
         </div>
@@ -39,24 +45,24 @@
                     <div>
                         <div class="font-semibold"><span>A</span></div>
                         <ul class="mt-2">
-                            <li><button title="access" class="flex items-center gap-2"><i class='bx bx-data text-blue-400 text-xl' ></i> <span>Access</span></button></li>
-                            <li><button title="access" class="flex items-center gap-2"><i class='bx bx-alarm text-blue-400 text-xl' ></i> <span>Alarm & clock</span></button></li>
+                            <li><button title="access" class="flex items-center gap-2"><img src="../../../assets/img/access.png" class="w-5" alt=""> <span>Access</span></button></li>
+                            <li class="mt-1"><button title="access" class="flex items-center gap-2"><img src="../../../assets/img/clock.png" class="w-5" alt=""> <span>Alarm & clock</span></button></li>
                         </ul>
                     </div>
                     <div class="mt-3">
                         <div class="font-semibold"><span>C</span></div>
                         <ul class="mt-2">
-                            <li><button title="access" class="flex items-center gap-2"><i class='bx bxs-calculator text-blue-400 text-xl'></i> Calculator</button></li>
-                            <li><button title="access" class="flex items-center gap-2"><i class='bx bxs-calendar text-blue-400 text-xl' ></i><span>Calendar</span></button></li>
-                            <li><button title="access" class="flex items-center gap-2"><i class='bx bx-camera text-blue-400 text-xl'></i><span>Camera</span></button></li>
-                            <li><button title="access">Clipchamp</button></li>
+                            <li class="mt-1"><button title="access" class="flex items-center gap-2"><img src="../../../assets/img/calculatrice.png" class="w-5" alt=""> Calculator</button></li>
+                            <li class="mt-1"><button title="access" class="flex items-center gap-2"><img src="../../../assets/img/calendar.png" class="w-5" alt=""><span>Calendar</span></button></li>
+                            <li class="mt-1"><button title="access" class="flex items-center gap-2"><img src="../../../assets/img/camera.png" class="w-5" alt=""><span>Camera</span></button></li>
+                            <li class="mt-1"><button title="access" class="flex items-center gap-2"><img src="../../../assets/img/clipchamp.png" class="w-5" alt=""><span>Clipchamp</span></button></li>
                         </ul>
                     </div>
                     <div class="mt-3">
                         <div class="font-semibold"><span>D</span></div>
                         <ul class="mt-2">
-                            <li><button title="access" class="flex items-center gap-2">Access</button></li>
-                            <li><button title="access" class="flex items-center gap-2">Alarm & clock</button></li>
+                            <li class="mt-1"><button title="access" class="flex items-center gap-2">Access</button></li>
+                            <li class="mt-1"><button title="access" class="flex items-center gap-2">Alarm & clock</button></li>
                         </ul>
                     </div>
                 </nav>
@@ -78,7 +84,7 @@
                     <div class="flex items-center gap-2">
                         <div class="bg-black/30 rounded-r-md h-full w-40 p-2  flex justify-between items-center">
                             <div class="flex items-center gap-2">
-                                <i class='bx bx-home text-xl'></i>
+                                <img src="../../../assets/img/home.png" class="w-5" alt="">
                                 <span>Home</span>
                             </div> 
                             <button><i class='bx bx-x text-xl'></i></button>
@@ -107,7 +113,7 @@
                     </div>
                     <div class="flex items-center justify-between bg-white/20 w-full backdrop-blur-md h-full p-2 rounded-full">
                         <div class="flex items-center">
-                            <i class='bx bx-home text-xl'></i>
+                            <img src="../../../assets/img/home.png" class="w-5" alt="">
                             <i class='bx bx-chevron-right'></i>
                             <span>home</span>
                             <i class='bx bx-chevron-right'></i>
@@ -120,23 +126,23 @@
                     </div>
                 </div>
                 <div class="h-full flex">
-                    <div class="p-2 backdrop-blur-sm h-full w-[25%]">
+                    <div class="p-2 h-full w-[25%]">
                         <ul class="w-full mt-2">
                             <li>
                                 <a routerLink="" class="bg-white/15 flex items-center gap-1 backdrop-blur-sm rounded-md p-2 w-full">
-                                    <i class='bx bx-home text-xl'></i>
+                                    <img src="../../../assets/img/home.png" class="w-5" alt="">
                                     <span>Home</span>
                                 </a>
                             </li>
                             <li class="">
                                 <a routerLink="" class="flex bg-transparent items-center gap-1  rounded-md p-2 w-full">
-                                    <i class='bx bx-home text-xl'></i>
+                                    <img src="../../../assets/img/onedrive.png" class="w-5" alt="">
                                     <span>OneDrives</span>
                                 </a>
                             </li>
                             <li>
                                 <a routerLink="" class="flex bg-transparent items-center gap-1 rounded-md p-2 w-full">
-                                    <i class='bx bx-home text-xl'></i>
+                                    <img src="../../../assets/img/galery.png" class="w-5" alt="">
                                     <span>Galery</span>
                                 </a>
                             </li>
