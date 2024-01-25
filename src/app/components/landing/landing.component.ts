@@ -3,6 +3,9 @@ import { CommonModule } from '@angular/common';
 
 import { gsap } from 'gsap';
 import { RouterModule } from '@angular/router';
+import { Draggable } from "gsap/Draggable";
+gsap.registerPlugin(Draggable);
+
 
 @Component({
   selector: 'app-landing',
@@ -34,6 +37,20 @@ export class LandingComponent implements OnInit{
     }).to('#chargement2',{
       width:'10vw',
       opacity:0
+    }).fromTo('#welcome',{
+      y:50,
+      opacity:0
+    },{
+      y:0,
+      x:-80,
+      opacity:1
+    }).fromTo('#likeur',{
+      y:50,
+      opacity:0
+    },{
+      y:0,
+      x:80,
+      opacity:1
     }).to('#chargement3',{
       width:'10vw',
       opacity:0
@@ -56,6 +73,8 @@ export class LandingComponent implements OnInit{
       opacity:0,
       display:'none',
     })
+
+    
 
     this.Menutl.to('#menuContextuelle',{
       height:'70vh',
@@ -97,6 +116,10 @@ export class LandingComponent implements OnInit{
       stagger:0.1
     }, "<")
 
+    Draggable.create('#FolderBox', {
+      bounds: '.draggarea',
+      inertia: true
+    })
   }
   openFolderPin(){
     this.FolderTl.to('#FolderBox',{
@@ -113,6 +136,11 @@ export class LandingComponent implements OnInit{
       stagger:0.1
     }, "<")
     this.Menutl.reverse()
+
+    Draggable.create('#FolderBox', {
+      bounds: '.draggarea',
+      inertia: true
+    })
   }
   closeFolder(){
     const closetl = gsap.timeline({
